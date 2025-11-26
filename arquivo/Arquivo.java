@@ -20,9 +20,7 @@ public class Arquivo {
         return instancia;
     }
 
-    // ===========================
-    // SALVAR (com Strategy)
-    // ===========================
+    
     public void salvar(SalvarStrategy estrategia) {
         try (FileWriter fw = new FileWriter(CAMINHO, true);
              PrintWriter pw = new PrintWriter(fw)) {
@@ -32,9 +30,7 @@ public class Arquivo {
         }
     }
 
-    // ===========================
-    // CARREGAR TODOS
-    // ===========================
+ 
     public List<Familia> carregarFamilias() {
         List<Familia> lista = new ArrayList<>();
         Familia atual = null;
@@ -108,3 +104,4 @@ public class Arquivo {
         return lista;
     }
 }
+
